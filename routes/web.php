@@ -17,8 +17,9 @@ Route::get('/', function () {
 
 Route::get('qr-code-g', function(){
   \QrCode::size(500)
+
   ->format('png')
-  ->generate('imanart.tech', public_path('images/qrcode.png'));
+  ->generate('imanart.tech', public_path('/../public/qrcode.png'));
 
   return view('qrCode');
 });
